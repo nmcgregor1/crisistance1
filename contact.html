@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact & Support · Crisistance</title>
 <meta name="description" content="Crisistance — Crisis Management for Small Business. Be Prepared...Respond with Purpose.">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -35,7 +34,7 @@
     <div class="container">
       <h1>Contact & Support</h1>
       <p class="lead">Tell us a bit about your needs. We typically respond within one business day.</p>
-      <form data-simple aria-label="Contact form">
+      <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" aria-label="Contact form">
         <div class="form-row">
           <div>
             <label for="name">Name</label>
@@ -43,18 +42,20 @@
           </div>
           <div>
             <label for="email">Email</label>
-            <input id="email" type="email" name="email" required placeholder="you@company.com">
+            <input id="email" type="email" name="_replyto" required placeholder="you@company.com">
           </div>
         </div>
         <label for="company">Company</label>
         <input id="company" name="company" placeholder="Company (optional)">
         <label for="message">How can we help?</label>
         <textarea id="message" name="message" required placeholder="Briefly describe your needs"></textarea>
+        <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_subject" value="Crisistance website inquiry">
         <div class="form-actions">
           <button class="btn btn-primary" type="submit">Send message</button>
-          <p class="lead" style="margin-top:8px">Production note: connect to Formspree or your backend before launch.</p>
         </div>
       </form>
+      <p class="lead" style="margin-top:8px">Replace <code>YOUR_FORMSPREE_ID</code> with your real endpoint from formspree.io.</p>
       <p>Prefer email? <a href="mailto:hello@crisistance.com">hello@crisistance.com</a></p>
     </div>
   </section>
