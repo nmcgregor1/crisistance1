@@ -1,49 +1,30 @@
 
 /* Crisistance site styles - desktop first, responsive */
 :root{
-  --navy:#11243a;      /* navy/slate mix */
+  --navy:#11243a;
   --slate:#23384d;
   --soft-gray:#f5f6f7;
-  --cta-red:#b03030;   /* subtle accent red */
+  --cta-red:#b03030;
   --text:#222;
   --muted:#6b7280;
   --white:#fff;
   --border:#e5e7eb;
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  color:var(--text);
-  background:#ffffff;
-  line-height:1.6;
-  font-size:16px;
-}
-
-/* Layout */
+body{ margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; color:var(--text); background:#fff; line-height:1.6; font-size:16px;}
 .container{max-width:1100px; margin:0 auto; padding:0 24px}
 .section{padding:64px 0}
 .section.alt{background:var(--soft-gray)}
 .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:24px}
 .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:24px}
-.card{
-  background:#fff; border:1px solid var(--border); border-radius:10px;
-  padding:24px; box-shadow:0 1px 2px rgba(17,24,39,.05);
-}
-.icon{width:28px; height:28px; display:inline-block; vertical-align:middle; margin-right:8px; fill:var(--slate)}
+.card{background:#fff; border:1px solid var(--border); border-radius:10px; padding:24px; box-shadow:0 1px 2px rgba(17,24,39,.05);}
 .lead{font-size:1.125rem; color:var(--muted)}
 h1,h2,h3{color:var(--navy); line-height:1.25; margin:0 0 12px}
-h1{font-size:3rem}
-h2{font-size:2rem}
-h3{font-size:1.25rem; font-weight:600}
+h1{font-size:3rem} h2{font-size:2rem} h3{font-size:1.25rem; font-weight:600}
 
 /* Header */
-header{
-  position:sticky; top:0; z-index:40;
-  background:var(--navy); color:#fff; border-bottom:1px solid rgba(255,255,255,.08)
-}
+header{position:sticky; top:0; z-index:40; background:var(--navy); color:#fff; border-bottom:1px solid rgba(255,255,255,.08)}
 .header-inner{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
 .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:#fff}
 .brand img{height:36px; width:auto}
@@ -52,39 +33,33 @@ nav ul{list-style:none; display:flex; gap:18px; margin:0; padding:0}
 nav a{color:#e6eef7; text-decoration:none; font-weight:500}
 nav a:hover, nav a:focus{color:#fff; text-decoration:underline}
 
-/* Hero */
-.hero{padding:96px 0; background:linear-gradient(0deg, #fff 0%, #f7f9fb 100%)}
-.hero .actions{margin-top:20px}
-.btn{
-  display:inline-block; padding:12px 20px; border-radius:6px; border:1px solid transparent;
-  font-weight:600; text-decoration:none; cursor:pointer
-}
-.btn-primary{background:var(--cta-red); color:#fff}
-.btn-primary:hover{filter:brightness(.95)}
+/* Buttons */
+.btn{display:inline-block; padding:12px 20px; border-radius:6px; border:1px solid transparent; font-weight:600; text-decoration:none; cursor:pointer}
+.btn-primary{background:var(--cta-red); color:#fff} .btn-primary:hover{filter:brightness(.95)}
 .btn-secondary{background:transparent; color:var(--navy); border-color:var(--navy)}
 
-/* Lists */
-.bullets{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:16px}
-.bullets li{list-style: none; padding-left:0}
+/* Grids & Figures */
+.hero{padding:96px 0; background:linear-gradient(0deg, #fff 0%, #f7f9fb 100%)}
+.hero-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:36px; align-items:center }
+.figure{display:block; overflow:hidden; border-radius:10px; border:1px solid var(--border); background:#fff; box-shadow:0 1px 2px rgba(17,24,39,.05)}
+.figure img{width:100%; height:auto; display:block}
+.figure .caption{padding:10px 14px; font-size:.95rem; color:var(--muted)}
+.grid-images{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:18px}
 
-/* Risk mini-cards */
+/* Risks */
 .risk{display:flex; gap:12px; align-items:flex-start}
-.risk .badge{min-width:28px; height:28px; border-radius:6px; background:var(--soft-gray); display:flex; align-items:center; justify-content:center}
-.risk .badge svg{width:16px; height:16px; fill:var(--slate)}
+.risk .badge{min-width:40px}
+.risk .badge img{width:40px; height:40px; border-radius:8px; display:block}
 
 /* Footer */
 footer{background:var(--navy); color:#c8d4e3; padding:32px 0; margin-top:48px}
-footer a{color:#e6eef7; text-decoration:none}
-footer a:hover{text-decoration:underline}
+footer a{color:#e6eef7; text-decoration:none} footer a:hover{text-decoration:underline}
 .footer-row{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
-.footer-brand{display:flex; align-items:center; gap:10px}
 footer img{height:28px}
 
-/* Contact form */
+/* Forms */
 form label{display:block; font-weight:600; margin:12px 0 6px}
-input, textarea{
-  width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:8px; font:inherit;
-}
+input, textarea{ width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:8px; font:inherit }
 textarea{min-height:140px; resize:vertical}
 .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px}
 .form-actions{margin-top:14px}
@@ -94,6 +69,7 @@ textarea{min-height:140px; resize:vertical}
   h1{font-size:2.25rem}
   .grid-3{grid-template-columns:1fr}
   .grid-4{grid-template-columns:1fr 1fr}
-  .bullets{grid-template-columns:1fr}
+  .grid-images{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
+  .hero-grid{ grid-template-columns: 1fr; }
 }
